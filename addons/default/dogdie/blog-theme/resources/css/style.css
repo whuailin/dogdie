@@ -470,7 +470,7 @@ margin-bottom:2em;
 display:inline-block;
 }
 .locations ul li span {
-background: url(../images/find.png) no-repeat 0px 0px;
+background: url('{{ asset_path("theme::images/find.png") }}') no-repeat 0px 0px;
 vertical-align: super;
 width: 48px;
 height: 48px;
@@ -580,7 +580,7 @@ color: #fff;
 	border: none;
 	text-indent: 100%;
 	z-index:999;
-	background: url(../images/to-top1.png) no-repeat 5px 10px #db5941;
+	background: url('{{ asset_path("theme::images/to-top1.png") }}') no-repeat 5px 10px #db5941;
 -webkit-border-radius: 50%;
 -moz-border-radius: 50%;
 -o-border-radius: 50%;
@@ -1267,7 +1267,7 @@ padding: 5px 8px;
 padding: 0px 0 10px 0;
 width: 37px;
 height: 32px;
-background: url(../images/splits.png) no-repeat -204px -11px;
+background: url('{{ asset_path("theme::images/splits.png") }}') no-repeat -204px -11px;
 }
 .search {
 padding: 1em;

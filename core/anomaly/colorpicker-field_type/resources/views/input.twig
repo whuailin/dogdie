@@ -1,0 +1,23 @@
+{{ asset_add("scripts.js", "anomaly.field_type.colorpicker::js/bootstrap-colorpicker.min.js") }}
+{{ asset_add("scripts.js", "anomaly.field_type.colorpicker::js/input.js") }}
+{{ asset_add("styles.css", "anomaly.field_type.colorpicker::scss/bootstrap-colorpicker.scss") }}
+
+<div class="input-group component">
+
+    <span class="input-group-addon">
+        <i style="background-color: {{ field_type.value ?: '#ffffff' }}"></i>
+    </span>
+
+    <input
+            type="text"
+            class="form-control"
+            value="{{ field_type.value }}"
+            name="{{ field_type.input_name }}"
+            data-format="{{ field_type.config.format }}"
+            data-colors="{{ field_type.colors ? field_type.colors|json_encode }}"
+            placeholder="{{ trans(field_type.placeholder) ?: '#ffffff' }}"
+            {{ html_attributes(field_type.attributes) }}
+            {{ field_type.disabled ? 'disabled' }}
+            {{ field_type.readonly ? 'readonly' }}>
+
+</div>

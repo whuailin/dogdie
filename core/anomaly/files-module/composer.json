@@ -1,0 +1,28 @@
+{
+    "name": "anomaly/files-module",
+    "type": "streams-addon",
+    "description": "Powerful asset management made easy.",
+    "keywords": [
+        "files",
+        "module",
+        "streams"
+    ],
+    "homepage": "http://pyrocms.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PyroCMS, Inc.",
+            "email": "support@pyrocms.com",
+            "homepage": "http://pyrocms.com/",
+            "role": "Owner"
+        }
+    ],
+    "support": {
+        "email": "support@pyrocms.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anomaly\\FilesModule\\": "src/"
+        }
+    }
+}

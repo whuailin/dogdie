@@ -1,0 +1,28 @@
+{
+    "name": "anomaly/posts-module",
+    "type": "streams-addon",
+    "description": "A versatile articles and posts manager.",
+    "keywords": [
+        "streams",
+        "module",
+        "posts"
+    ],
+    "homepage": "http://pyrocms.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PyroCMS, Inc.",
+            "email": "support@pyrocms.com",
+            "homepage": "http://pyrocms.com/",
+            "role": "Owner"
+        }
+    ],
+    "support": {
+        "email": "support@pyrocms.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anomaly\\PostsModule\\": "src/"
+        }
+    }
+}

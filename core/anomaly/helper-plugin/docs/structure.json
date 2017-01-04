@@ -1,0 +1,19 @@
+{
+    "getting-started": {
+        "title": {
+            "en": "Getting Started"
+        },
+        "pages": {
+            "introduction": {
+                "title": {
+                    "en": "Introduction"
+                }
+            },
+            "usage": {
+                "title": {
+                    "en": "Usage"
+                }
+            }
+        }
+    }
+}

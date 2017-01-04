@@ -1,0 +1,28 @@
+{
+    "name": "anomaly/pages-module",
+    "type": "streams-addon",
+    "description": "A powerful module for the Streams Platform that lets you create pages, generate navigation, manage content, and build websites faster than ever.",
+    "keywords": [
+        "pages",
+        "module",
+        "streams platform"
+    ],
+    "homepage": "http://pyrocms.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PyroCMS, Inc.",
+            "email": "support@pyrocms.com",
+            "homepage": "http://pyrocms.com/",
+            "role": "Owner"
+        }
+    ],
+    "support": {
+        "email": "support@pyrocms.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anomaly\\PagesModule\\": "src/"
+        }
+    }
+}

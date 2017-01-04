@@ -1,0 +1,46 @@
+{% extends post.type.theme_layout.key %}
+
+{% block content %}
+
+    <div id="posts">
+        <article id="post">
+
+            <header>
+
+                <h1>{{ post.title }}</h1>
+
+                <div class="meta">
+
+                    <span class="author">
+                        {{ post.author.display_name }}
+                    </span>
+
+                    <time class="date" datetime="{{ post.publish_at.iso }}">
+                        {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
+                    </time>
+
+                    {% if post.category %}
+                        <span class="category">
+                            {{ html_link(post.category.path, post.category.name) }}
+                        </span>
+                    {% endif %}
+
+                    {% if post.tags %}
+                        <span class="tags">
+                            {{ post.tags.labels|join(' ')|raw }}
+                        </span>
+                    {% endif %}
+
+                </div>
+
+            </header>
+
+            <div class="content">
+                {% block post %}
+                    {{ content|raw }}
+                {% endblock %}
+            </div>
+
+        </article>
+    </div>
+{% endblock %}

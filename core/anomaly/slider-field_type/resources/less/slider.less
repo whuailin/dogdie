@@ -1,0 +1,132 @@
+// Slider
+// --------------------------------------------------
+
+// Default controls
+// -------------------------
+
+.ui-slider {
+    background: mix(#2c2c2c, white, 10%);
+    border-radius: 32px;
+    height: 12px;
+    box-shadow: none;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ui-slider-handle {
+    background-color: mix(@brand-info, black, 85%);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 18px;
+    position: absolute;
+    width: 18px;
+    z-index: 2;
+    transition: background .25s;
+
+    &:hover,
+    &:focus {
+        background-color: mix(@brand-info, white, 80%);
+        outline: none;
+    }
+    &:active {
+        background-color: mix(@brand-info, black, 85%);
+    }
+}
+
+.ui-slider-range {
+    background-color: @brand-info;
+    display: block;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+// Segments
+// -------------------------
+.ui-slider-segment {
+    background-color: mix(desaturate(#2c2c2c, 15%), white, 20%);
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+}
+
+// Values
+// -------------------------
+.ui-slider-value {
+    float: right;
+    font-size: floor((15 * 0.867));
+    margin-top: 12px;
+
+    &.first {
+        clear: left;
+        float: left;
+    }
+}
+
+// Horizontal orientation
+// -------------------------
+
+.ui-slider-horizontal {
+    .ui-slider-handle {
+        margin-left: -9px;
+        top: -3px;
+
+        &[style*="100"] {
+            margin-left: -15px;
+        }
+    }
+    .ui-slider-range {
+        border-radius: 30px 0 0 30px;
+    }
+    .ui-slider-segment {
+        float: left;
+        margin: 3px -6px 0 0;
+    }
+}
+
+// Vertical orientation
+// -------------------------
+
+.ui-slider-vertical {
+    width: 12px;
+
+    .ui-slider-handle {
+        margin-left: -3px;
+        margin-bottom: -11px;
+        top: auto;
+    }
+    .ui-slider-range {
+        width: 100%;
+        bottom: 0;
+        border-radius: 0 0 30px 30px;
+    }
+    .ui-slider-segment {
+        position: absolute;
+        right: 3px;
+    }
+}
+
+.has-danger {
+    .value-label {
+        color: @brand-danger;
+    }
+}
+
+.has-success {
+    .value-label {
+        color: @brand-success;
+    }
+}
+
+.has-info {
+    .value-label {
+        color: @brand-info;
+    }
+}
+
+.has-warning {
+    .value-label {
+        color: @brand-warning;
+    }
+}

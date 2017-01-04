@@ -1,0 +1,61 @@
+{
+    "name": "anomaly/streams-platform",
+    "description": "A powerful, inclusive, modular PHP application engine built lovingly for Laravel.",
+    "authors": [
+        {
+            "name": "Ryan Thompson",
+            "email": "ryan@pyrocms.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.3.*",
+        "laravel/envoy": "1.2.*",
+        "laravel/scout": "1.0.*",
+        "doctrine/dbal": "2.5.*",
+        "intervention/image": "2.3.*",
+        "laravelcollective/html": "5.3.*",
+        "twig/twig": "1.24.*",
+        "rcrowe/twigbridge": "0.9.*",
+        "barryvdh/laravel-debugbar": "2.3.*",
+        "coffeescript/coffeescript": "1.3.*",
+        "michelf/php-markdown": "1.6.*",
+        "aptoma/twig-markdown": "2.0.*",
+        "guzzlehttp/guzzle": "6.2.*",
+        "guzzlehttp/psr7": "1.3.*",
+        "guzzlehttp/promises": "1.2.*",
+        "kriswallsmith/assetic": "1.3.*",
+        "leafo/scssphp": "0.6.*",
+        "lmammino/jsmin4assetic": "1.0.*",
+        "natxet/CssMin": "3.0.*",
+        "oyejorge/less.php": "1.7.*",
+        "ptachoire/cssembed": "1.0.*",
+        "robclancy/presenter": "1.3.*",
+        "nicmart/string-template": "0.1.*",
+        "phive/twig-extensions-deferred": "0.3.*",
+        "league/flysystem-cached-adapter": "1.0.*",
+        "teamtnt/laravel-scout-tntsearch-driver": "1.1.*",
+        "symfony/yaml": "3.1.*",
+        "jenssegers/agent": "2.3.*",
+        "asm89/twig-cache-extension": "1.3.*",
+        "misd/linkify": "1.1.*",
+        "symfony/class-loader": "3.1.*",
+        "websemantics/lcss2php": "1.0.*"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "3.0.*",
+        "benconstable/phpspec-laravel": "3.0.*",
+        "henrikbjorn/phpspec-code-coverage": "3.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anomaly\\Streams\\Platform\\": "src/"
+        },
+        "files": [
+            "src/Support/_helpers.php"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "license": "MIT"
+}

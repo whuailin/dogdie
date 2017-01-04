@@ -1,0 +1,13 @@
+<div class="widget card" data-id="{{ widget.id }}">
+
+    <span class="{{ widget.sortable ? 'handle' }} card-label card-label-{{ widget.context }}">
+        {{ widget.title }}
+    </span>
+
+    <div class="card-block">
+        {{ widget.content|raw }}
+    </div>
+
+    <div class="card-corner card-corner-{{ widget.context }}"></div>
+
+</div>

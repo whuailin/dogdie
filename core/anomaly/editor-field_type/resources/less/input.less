@@ -1,0 +1,62 @@
+.editor-field_type {
+    .editor {
+        position: relative;
+
+        > a {
+            top: 15px;
+            right: 15px;
+            opacity: 0.5;
+            z-index: 100;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 16px;
+            position: absolute;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.fullscreen {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1150;
+        position: fixed;
+
+        > label,
+        > p {
+            display: none;
+        }
+    }
+}
+
+// Contextual Variations
+// --------------------------------------------------
+
+.has-danger {
+    .ace_editor {
+        border: 1px solid @brand-danger;
+    }
+}
+
+.has-success {
+    .ace_editor {
+        border: 1px solid @brand-success;
+    }
+}
+
+.has-warning {
+    .ace_editor {
+        border: 1px solid @brand-warning;
+    }
+}
+
+.has-info {
+    .ace_editor {
+        border: 1px solid @brand-info;
+    }
+}

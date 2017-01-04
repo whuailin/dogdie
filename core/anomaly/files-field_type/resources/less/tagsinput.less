@@ -1,0 +1,143 @@
+//
+// Tags Input
+// --------------------------------------------------
+
+.bootstrap-tagsinput {
+    background-color: #ffffff;
+    border: 2px solid #bdc3c7;
+    border-radius: 0 5px 5px 0;
+    margin-bottom: 0;
+    padding: 5px 1px 4px 8px;
+    text-align: left;
+    font-size: 0;
+
+    .tag {
+        color: #ffffff;
+        border-radius: 3px;
+        background-color: #bdc3c7;
+        font-size: floor((15px * 0.886)); // ~13px
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        overflow: hidden;
+        margin: 1px 5px 1px 0;
+        line-height: 15px;
+        height: 27px;
+        padding: 6px 21px;
+        transition: .25s linear;
+
+        &.placeholder {
+            opacity: 0.7;
+        }
+
+        > span {
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            text-align: right;
+            text-decoration: none;
+            top: 1px;
+            width: 100%;
+            bottom: 0;
+            padding: 0 10px 0 0;
+            z-index: 2;
+            transition: opacity .25s linear;
+            filter: e(%("alpha(opacity=%d)", 0));
+            -khtml-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 0;
+
+            &:after {
+                content: "\e609";
+                font-family: "Flat-UI-Pro-Icons";
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                line-height: 27px;
+            }
+        }
+
+        &:hover {
+            color: #ffffff;
+            background-color: darken(#bdc3c7, 10%);
+            padding-right: 28px;
+            padding-left: 14px;
+
+            > span {
+                opacity: 1;
+                filter: none;
+            }
+        }
+    }
+
+    input[type="text"] {
+        font-size: ceil((15px * 0.933)); // 14px;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        width: auto !important;
+        max-width: inherit;
+        min-width: 80px;
+        vertical-align: top;
+        height: 29px;
+        color: #2c2c2c;
+
+        &:first-child {
+            height: 23px;
+            margin: 3px 0 3px;
+        }
+    }
+}
+
+.tags_clear {
+    clear: both;
+    width: 100%;
+    height: 0;
+}
+
+.not_valid {
+    background: #fbd8db !important;
+    color: #90111a !important;
+    margin-left: 5px !important;
+}
+
+// Alternate Color
+// --------------------------------------------------
+.tagsinput-primary {
+    margin-bottom: 18px;
+
+    .bootstrap-tagsinput {
+        border-color: @secondary;
+        margin-bottom: 0;
+    }
+    .tag {
+        background-color: @secondary;
+        color: #ffffff;
+
+        &:hover {
+            background-color: mix(@secondary, black, 85%);
+            color: #ffffff;
+        }
+    }
+}
+
+// Styles for Typeahead support
+// --------------------------------------------------
+.bootstrap-tagsinput .twitter-typeahead {
+    width: auto;
+    vertical-align: top;
+
+    .tt-input {
+        min-width: 200px;
+    }
+    .tt-dropdown-menu {
+        width: auto;
+        min-width: 120px;
+        margin-top: 11px;
+    }
+}

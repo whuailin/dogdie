@@ -1,0 +1,28 @@
+{
+    "name": "anomaly/variables-module",
+    "type": "streams-addon",
+    "description": "Manage variables and bits of content that can be used anywhere.",
+    "keywords": [
+        "streams module",
+        "streams addon",
+        "module"
+    ],
+    "homepage": "http://pyrocms.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PyroCMS, Inc.",
+            "email": "support@pyrocms.com",
+            "homepage": "http://pyrocms.com/",
+            "role": "Owner"
+        }
+    ],
+    "support": {
+        "email": "support@pyrocms.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anomaly\\VariablesModule\\": "src/"
+        }
+    }
+}

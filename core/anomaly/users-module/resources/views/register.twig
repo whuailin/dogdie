@@ -1,0 +1,7 @@
+{% extends layout('users') %}
+
+{% block content %}
+
+    {{ form('register').redirect(request_get('redirect'))|raw }}
+
+{% endblock %}

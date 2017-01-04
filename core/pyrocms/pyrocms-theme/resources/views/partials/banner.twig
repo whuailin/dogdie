@@ -1,0 +1,5 @@
+{% if template.show_banner %}
+    <section id="banner"
+             style="background-image: url({{ image_path(random(config('pyrocms.theme.pyrocms::design.banners'))) }})">
+    </section>
+{% endif %}

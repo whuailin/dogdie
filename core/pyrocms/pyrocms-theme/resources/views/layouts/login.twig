@@ -1,0 +1,16 @@
+<!doctype html>
+
+<html>
+
+<head>
+    {% include "theme::partials/metadata" %}
+</head>
+
+<body id="login" style="background-image: url({{ image_path(random(config('pyrocms.theme.pyrocms::design.backgrounds'))) }})">
+
+{{ block('content') }}
+
+{% include "theme::partials/js" %}
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+    "name": "anomaly/sitemap-extension",
+    "type": "streams-addon",
+    "description": "A dynamic sitemap generator extension.",
+    "keywords": [
+        "sitemap generator",
+        "extension",
+        "sitemap"
+    ],
+    "homepage": "http://pyrocms.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PyroCMS, Inc.",
+            "email": "support@pyrocms.com",
+            "homepage": "http://pyrocms.com/",
+            "role": "Owner"
+        }
+    ],
+    "support": {
+        "email": "support@pyrocms.com"
+    },
+    "require": {
+        "roumen/sitemap": "2.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anomaly\\SitemapExtension\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{{ asset_add("styles.css", "anomaly.field_type.tags::less/tagsinput.less") }}
+{{ asset_add("scripts.js", "anomaly.field_type.tags::js/bootstrap-tagsinput.min.js") }}
+{{ asset_add("scripts.js", "anomaly.field_type.tags::js/bootstrap3-typeahead.min.js") }}
+{{ asset_add("scripts.js", "anomaly.field_type.tags::js/input.js") }}
+
+<input
+        class="form-control"
+        name="{{ field_type.input_name }}"
+        value="{{ field_type.value|join(',') }}"
+        placeholder="{{ trans(field_type.placeholder) }}"
+        data-options="{{ field_type.options|join(',') }}"
+        data-free_input="{{ field_type.config.free_input }}"
+        {{ html_attributes(field_type.attributes) }}
+        {{ field_type.disabled ? 'disabled' }}
+        {{ field_type.readonly ? 'readonly' }}>
+
+<small class="text-muted">
+    {{ trans('anomaly.field_type.tags::input.help') }}
+</small>

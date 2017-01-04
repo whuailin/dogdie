@@ -1,0 +1,24 @@
+<div class="card" {{ html_attributes(section.attributes) }}>
+
+    {% if section.title %}
+        <div class="card-label card-label-{{ section.context ?: 'info' }}">
+            {{ section.icon ? icon(section.icon) }}
+            {{ trans(section.title) }}
+        </div>
+    {% endif %}
+
+    <div class="card-block">
+        {% for field in section.fields %}
+            <div class="field-group">
+                {% for field in form.fields.translations(field) %}
+                    {{ field.render({'form': form})|raw }}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if section.title or section.context %}
+        <div class="card-corner card-corner-{{ section.context ?: 'info' }}"></div>
+    {% endif %}
+
+</div>

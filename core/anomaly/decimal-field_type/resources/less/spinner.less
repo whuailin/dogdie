@@ -1,0 +1,172 @@
+@import "mixins";
+
+//
+// Spinner
+// --------------------------------------------------
+
+// Spinner Wrapper
+.ui-spinner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0 37px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    .ui-button-text {
+        display: block;
+    }
+
+    // Focus State
+    &.focus {
+        .ui-spinner-input {
+            color: @brand-primary;
+            border-color: @brand-primary;
+        }
+        .ui-spinner-button {
+            background-color: @brand-primary;
+
+            &:hover {
+                background-color: mix(@brand-primary, black, 85%);
+            }
+        }
+        .ui-spinner-up {
+            border-bottom-color: mix(@brand-primary, black, 85%);
+        }
+    }
+}
+
+// Spinner Input
+.ui-spinner-input {
+    width: 100%;
+    border-radius: @input-border-radius 0 0 @input-border-radius;
+    text-align: left;
+    padding: 6px 12px;
+    border-right-width: 0 !important;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1.467;
+    &::-moz-placeholder {
+        color: desaturate(lighten(#999999, 22%), 16%); // Firefox
+        opacity: 1;
+    }
+    // See https://github.com/twbs/bootstrap/pull/11526
+    &:-ms-input-placeholder {
+        color: #999999;
+    }
+    // Internet Explorer 10+
+    &::-webkit-input-placeholder {
+        color: #999999;
+    }
+    // Safari and Chrome
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    // Spinner sizing
+    &.input-hg {
+        .spinner-variant(28px; 25px; 25px);
+    }
+    &.input-lg {
+        .spinner-variant(24px; 21px; 21px);
+    }
+    &.input-sm {
+        font-size: 18px;
+        line-height: 1;
+
+        .spinner-variant(19px; 17px; 1);
+    }
+}
+
+// Prepend spinner
+.input-group-addon + .ui-spinner {
+    .ui-spinner-input {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+// Spinner Buttons
+.ui-spinner-button {
+    display: block;
+    font-size: .5em;
+    line-height: 19px;
+    height: 22px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 37px;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #bdc3c7;
+    outline: none;
+
+    &:hover {
+        background-color: mix(#bdc3c7, white, 70%);
+        color: mix(@brand-primary, white, 10%);
+    }
+
+    // Icon
+    .ui-icon {
+        font-size: 0;
+
+        &:before {
+            content: "\f0d8";
+            font-family: "FontAwesome";
+            font-size: 16px;
+            line-height: 19px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+}
+
+.ui-spinner-up {
+    border-bottom: 2px solid mix(#bdc3c7, white, 70%);
+    top: 0;
+    border-radius: 0 @input-border-radius 0 0;
+}
+
+.ui-spinner-down {
+    bottom: 0;
+    height: 20px;
+    border-radius: 0 0 @input-border-radius 0;
+
+    .ui-icon:before {
+        content: "\f0d7";
+        font-family: "FontAwesome";
+    }
+}
+
+.has-danger {
+    .ui-spinner-button {
+        background: @brand-danger;
+    }
+}
+
+.has-success {
+    .ui-spinner-button {
+        background: @brand-success;
+    }
+}
+
+.has-info {
+    .ui-spinner-button {
+        background: @brand-info;
+    }
+}
+
+.has-warning {
+    .ui-spinner-button {
+        background: @brand-warning;
+    }
+}

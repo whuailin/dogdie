@@ -1,0 +1,22 @@
+{{ asset_add("styles.css", "anomaly.field_type.slider::less/slider.less") }}
+{{ asset_add("scripts.js", "anomaly.field_type.slider::js/jquery-ui.slider.min.js") }}
+{{ asset_add("scripts.js", "anomaly.field_type.slider::js/extra.js") }}
+{{ asset_add("scripts.js", "anomaly.field_type.slider::js/input.js") }}
+
+<label class="value-label">
+    {{ trans("anomaly.field_type.slider::input.value") }}: <span class="value">{{ field_type.value ?: 0 }}</span> {{ field_type.config.unit }}
+</label>
+
+<div
+        class="slider"
+        data-min="{{ field_type.config.min }}"
+        data-max="{{ field_type.config.max }}"
+        data-step="{{ field_type.config.step }}"
+        data-range="{{ field_type.config.range }}"
+        data-unit="{{ field_type.config.unit }}"
+        data-value="{{ field_type.value }}"
+        {{ html_attributes(field_type.attributes) }}>
+
+    <input type="hidden" name="{{ field_type.input_name }}" value="{{ field_type.value }}">
+
+</div>

@@ -1,0 +1,19 @@
+{{ asset_add("scripts.js", "streams::js/form/form.js") }}
+{{ asset_add("scripts.js", "streams::js/form/translations.js") }}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+        {{ form_open({'class': 'form', 'enctype': 'multipart/form-data', 'url': form.options.url ?: url_full()}) }}
+
+        {{ view("streams::form/partials/controls", {'form': form, 'position': 'top'}) }}
+        {{ view(form.options.get('heading', "streams::form/partials/heading"), {'form': form}) }}
+        {{ view("streams::form/partials/layout", {'form': form}) }}
+        {{ view("streams::form/partials/controls", {'form': form, 'position': 'bottom'}) }}
+
+        {{ form_close() }}
+
+    </div>
+
+{% endblock %}

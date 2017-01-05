@@ -11,7 +11,7 @@ class FilesDocumentsEntryModel extends EntryModel
 
     protected $table = 'files_documents';
 
-    protected $titleName = '';
+    protected $titleName = 'id';
 
     protected $rules = [
 ];
@@ -30,14 +30,19 @@ class FilesDocumentsEntryModel extends EntryModel
     protected $translationModel = 'Anomaly\Streams\Platform\Model\Files\FilesDocumentsEntryTranslationsModel';
 
     protected $stream = [
-'slug' => 'documents',
-'namespace' => 'files',
-'translatable' => '1',
-'trashable' => '1',
-'locked' => '',
-'config' => 'a:0:{}',
-'prefix' => 'files_',
 'id' => '22',
+'namespace' => 'files',
+'slug' => 'documents',
+'prefix' => 'files_',
+'title_column' => 'id',
+'order_by' => 'id',
+'locked' => '0',
+'hidden' => '0',
+'sortable' => '0',
+'searchable' => '0',
+'trashable' => '1',
+'translatable' => '1',
+'config' => 'a:0:{}',
 'assignments' => [
 ],
 'translations' => [

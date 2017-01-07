@@ -12,7 +12,8 @@
         <div class="container">
             <div class="logo">
                 <a href="/">
-                    {{ img('theme::images/logo.png').title("soup")|raw }}
+                    {#{{ img('theme::images/logo.png').title("soup")|raw }}#}
+                    {{ dogdie.log | raw }}
                 </a>
             </div>
             <!---start-top-nav---->

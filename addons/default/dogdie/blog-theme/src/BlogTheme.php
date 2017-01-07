@@ -21,7 +21,7 @@ class BlogTheme extends Theme
         $this->dispatch(new AddPostsBreadcrumb());
         $this->dispatch(new AddPostsMetaTitle());
 
-        return view('anomaly.module.posts::posts/index', compact('posts'));
+        return view('dogdie.theme.blog::partials/index', compact('posts'));
     }
 
 }

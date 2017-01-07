@@ -13,7 +13,7 @@
             <div class="logo">
                 <a href="/">
                     {#{{ img('theme::images/logo.png').title("soup")|raw }}#}
-                    {{ dogdie.icon | raw }}
+                    {{ variable('dogdie', 'logo') | raw }}
                 </a>
             </div>
             <!---start-top-nav---->
@@ -24,7 +24,7 @@
     </div>
     <div class="container">
         <div class="banner-head">
-            <h1>{{ dogdie.slogan | raw }}</h1>
+            <h1>{{ variable('dogdie', 'slogan') | raw }}</h1>
             <h2>cliquam tincidunt mauris</h2>
         </div>
         <div class="banner-links">

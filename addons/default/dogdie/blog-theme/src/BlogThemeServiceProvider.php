@@ -9,7 +9,9 @@ class BlogThemeServiceProvider extends AddonServiceProvider
 
     protected $commands = [];
 
-    protected $routes = [];
+    protected $routes = [
+        '/' => 'Dogdie\BlogTheme\BlogTheme@index',
+    ];
 
     protected $middleware = [];
 

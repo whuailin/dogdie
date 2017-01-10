@@ -4,40 +4,16 @@
         <div class="container">
             <div class="content-grids">
                 <div class="col-md-8 content-main">
-                    <div class="content-grid">
-                        <div class="content-grid-head">
-                            <h3>POST OF THE DAY</h3>
-                            <h4>July 24, 2014,Posted by: <a href="#">Admin</a></h4>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="content-grid-info">
-                            <h3><a href="single.html">MORBI IN SEM QUIS DUI</a></h3>
-                            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
-                            {{ img('theme::images/c1.jpg')|raw }}
-                            <a class="bttn" href="single.html">MORE</a>
-                        </div>
+                    <div id="posts">
+
+                        {% set posts = entries('posts').recent().take(5).get() %}
+
+                        {% include "dogdie.theme.blog::partials/posts_item" with {"posts": posts} %}
+
+                        {{ posts.links|raw }}
+
                     </div>
 
-                    <div class="content-grid-sec">
-                        <div class="content-sec-info">
-                            <h3><a href="single.html">ALIQUAM TINCIDUNT MAURI</a></h3>
-                            <h4>Jul 23, 2014, Posted by : <a href="#">Admin</a></h4>
-                            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
-                            {{ img('theme::images/c2.jpg')|raw }}
-
-                            <a class="bttn" href="single.html">MORE</a>
-                        </div>
-                    </div>
-                    <div class="content-grid-sec">
-                        <div class="content-sec-info">
-                            <h3><a href="single.html">VESTIBULUM COMMODO FELIS</a></h3>
-                            <h4>Jul 23, 2014, Posted by : <a href="#">Admin</a></h4>
-                            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
-                            {{ img('theme::images/c3.jpg')|raw }}
-
-                            <a class="bttn" href="single.html">MORE</a>
-                        </div>
-                    </div>
                     <div class="pages">
                         <ul>
                             <li class="active"><a href="#">1</a></li>

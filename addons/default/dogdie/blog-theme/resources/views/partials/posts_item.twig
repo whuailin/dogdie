@@ -1,10 +1,12 @@
-<div class="content-grid-sec">
-    <div class="content-sec-info">
-        <h3><a href="single.html">ALIQUAM TINCIDUNT MAURI</a></h3>
-        <h4>Jul 23, 2014, Posted by : <a href="#">Admin</a></h4>
-        <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
-        {{ img('theme::images/c2.jpg')|raw }}
+{% for post in posts %}
+    <div class="content-grid-sec">
+        <div class="content-sec-info">
+            <h3><a href="single.html">ALIQUAM TINCIDUNT MAURI</a></h3>
+            <h4>Jul 23, 2014, Posted by : <a href="#">Admin</a></h4>
+            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
+            {{ img('theme::images/c2.jpg')|raw }}
 
-        <a class="bttn" href="single.html">MORE</a>
+            <a class="bttn" href="single.html">MORE</a>
+        </div>
     </div>
-</div>
+{% endfor %}
